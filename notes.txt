@@ -1,0 +1,84 @@
+FLUTTER WIDGETS
+--------------------------------------------------------------
+- Types include: 
+1. text widget 
+2. button widget 
+3. row widget  ----
+4. column widget | |
+5. image widget 
+
+- we can pass properties to this widgets to style them ie: 
+
+1. text widget 
+    - style property
+    - textAlign property
+    - overflow
+    - max lines 
+
+2. button widget 
+    - color 
+    - elevation 
+    - disabledColor 
+    - enabled 
+
+- all widgets in flutter are classes each widget has it programmatic which defines its behavior and
+  how it looks on screen 
+
+
+/****************************************************************/
+Scaffold and AppBar widget 
+/****************************************************************/
+Scaffold widget enable creating a basic layout for our app 
+
+
+
+/****************************************************************/
+Layout
+/****************************************************************/
+
+Container
+--------------------------------------------------------------------
+Container are used for the purpose of all the reading that happens in the system
+
+padding is available in containers we can use it with 
+  EdgeInsets.symmetric
+  - padding for across and upwards
+  - if up and down, and left and right padding is same us symmetric
+
+
+Padding Widget 
+----------------------------------------------------------------------
+- can be used to pad text 
+
+
+
+Row 
+-------------------------------------------
+- items in row can be squized together to avoid this use: 
+
+- Main axis is the row directions (rightwards)
+
+- cross axis is in column direction (downwards)
+
+Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Text(title),
+          TextButton(
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.purple[300],
+              
+            ),
+            onPressed: () {title = 'dickspon'; print(title);}, 
+            child: const Text('click me', style: TextStyle(color: Colors.black))
+          ),
+          Container(
+            color: Colors.purple[100],
+            padding: EdgeInsets.all(20.0),
+            child: Text('container'),
+          ),
+        ]
+      ),
+
+
+Expanded
